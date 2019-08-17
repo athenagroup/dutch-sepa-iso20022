@@ -5,8 +5,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nl.irp.sepa</groupId>
 	<artifactId>sepa-iso20022</artifactId>
-	<name>Dutch SEPA iso20022 utilities</name>
-	<version>0.0.2</version>
+	<name>Dutch SEPA ISO 20022 utilities</name>
+    <description>This Java library aims to make it easier to create SEPA PAIN messages for use in financial applications.</description>
+	<version>0.0.3</version>
 	<packaging>jar</packaging>
 	<inceptionYear>2012</inceptionYear>
 	<licenses>
@@ -23,6 +24,34 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
+
+    <scm>
+        <url>https://github.com/athenagroup/dutch-sepa-iso20022</url>
+        <connection>scm:git:git://github.com/athenagroup/dutch-sepa-iso20022.git</connection>
+        <developerConnection>scm:git:git@github.com:athenagroup/dutch-sepa-iso20022.git</developerConnection>
+    </scm>
+
+
+    <issueManagement>
+        <url>https://github.com/athenagroup/dutch-sepa-iso20022/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <developers>
+        <developer>
+            <email>jasper@irp.nl></email>
+            <name>Jasper Krijgsman</name>
+            <url>https://github.com/jasperkrijgsman</url>
+        </developer>
+    </developers>
+
+    <contributors>
+        <contributor>
+            <email>jan-willem.meyling@athenastudies.nl</email>
+            <name>Jan-Willem Gmelig Meyling</name>
+            <url>https://github.com/JWGmeligMeyling</url>
+        </contributor>
+    </contributors>
 
 	<build>
 		<plugins>
@@ -116,19 +145,13 @@
 			<version>11.0.1</version>
 		</dependency>
 	</dependencies>
-	
-	<distributionManagement>
-		<!-- use the following if you're not using a snapshot version. -->
-		<repository>
-			<id>nexus-release</id>
-			<name>Releases</name>
-			<url>http://dev.wosi.org/nexus/content/repositories/releases/</url>
-		</repository>
-		<!-- use the following if you ARE using a snapshot version. -->
-		<snapshotRepository>
-			<id>nexus-snapshot</id>
-			<name>Snapshots</name>
-			<url>http://dev.wosi.org/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Athena Group Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/athenagroup/dutch-sepa-iso20022</url>
+        </repository>
+    </distributionManagement>
+
 </project>
