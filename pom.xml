@@ -70,8 +70,8 @@
 			</plugin>
 			<plugin>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin</artifactId>
-				<version>0.7.3</version>
+				<artifactId>maven-jaxb23-plugin</artifactId>
+				<version>0.14.0</version>
 				<executions>
 					<execution>
 						<goals>
@@ -80,13 +80,35 @@
 					</execution>
 				</executions>
 				<configuration>
+					<strict>false</strict>
+					<extension>true</extension>
 					<verbose>true</verbose>
 					<schemaIncludes>
 						<include>pain.001.001.03.xsd</include>
 						<include>camt.053.001.02.xsd</include>
 						<include>pain.008.001.02.xsd</include>
 					</schemaIncludes>
-					<!--<generatePackage>nl.irp.sepa.pain.model</generatePackage>-->
+					<bindingIncludes>
+						<bindingInclude>binding.xjb</bindingInclude>
+					</bindingIncludes>
+					<plugins>
+						<plugin>
+							<groupId>org.jvnet.jaxb2_commons</groupId>
+							<artifactId>jaxb2-basics</artifactId>
+							<version>0.6.2</version>
+						</plugin>
+						<plugin>
+							<groupId>org.jvnet.jaxb2_commons</groupId>
+							<artifactId>jaxb2-basics-annotate</artifactId>
+							<version>0.6.2</version>
+						</plugin>
+					</plugins>
+					<args>
+						<arg>-Xannotate</arg>
+						<arg>-Xequals</arg>
+						<arg>-XhashCode</arg>
+						<arg>-Xcopyable</arg>
+					</args>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -143,6 +165,12 @@
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>11.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jvnet.jaxb2_commons</groupId>
+			<artifactId>jaxb2-basics-runtime</artifactId>
+			<version>0.6.2</version>
 		</dependency>
 	</dependencies>
 
