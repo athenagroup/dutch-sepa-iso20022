@@ -12,4 +12,7 @@
             </annox:annotate>
         </jaxb:bindings>
     </jaxb:bindings>
+    <jaxb:globalBindings>
+        <xjc:serializable uid="-1"/>
+    </jaxb:globalBindings>
 </jaxb:bindings>
