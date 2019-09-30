@@ -7,7 +7,7 @@
 	<artifactId>sepa-iso20022</artifactId>
 	<name>Dutch SEPA ISO 20022 utilities</name>
     <description>This Java library aims to make it easier to create SEPA PAIN messages for use in financial applications.</description>
-	<version>0.0.4</version>
+	<version>0.0.5</version>
 	<packaging>jar</packaging>
 	<inceptionYear>2012</inceptionYear>
 	<licenses>
